@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+
+<?xdevuiml version="1.0"?>
+<?template BROWSER_XGA?>
+<?import com.xdev.rcdemo.globalactions.ui.View1?>
+<?import com.xdev.rcdemo.globalactions.ui.View2?>
+<?import com.xdev.rcdemo.globalactions.ui.View3?>
+<?import com.xdev.rcdemo.globalactions.ui.actions.SaveAction?>
+<?import com.xdev.ui.XdevButton?>
+<?import com.xdev.ui.XdevGridLayout?>
+<?import com.xdev.ui.XdevHorizontalLayout?>
+<?import com.xdev.ui.XdevPanel?>
+<?import com.xdev.ui.XdevUI?>
+<?import com.xdev.ui.navigation.XdevNavigator?>
+<XdevUI xmlns:x="http://xml.xdev-software.com/xdevuiml" x:name="MainUI">
+    <x:constraints zpos="0" width="100%" height="100%" />
+    <XdevGridLayout x:name="gridLayout">
+        <x:constraints zpos="0" width="100%" height="100%" />
+        <XdevHorizontalLayout x:name="horizontalLayout" margin="">
+            <x:constraints gridx="1" gridy="1" weighty="0.0" weightx="0.1" width="100%" />
+            <XdevButton caption="View1" styleName="borderless" x:name="cmdView1">
+                <x:constraints weightx="0.0" />
+                <x:event>click.buttonClick</x:event>
+            </XdevButton>
+            <XdevButton caption="View2" styleName="borderless" x:name="cmdView2">
+                <x:constraints weightx="0.0" />
+                <x:event>click.buttonClick</x:event>
+            </XdevButton>
+            <XdevButton caption="View3" styleName="borderless" x:name="cmdView3">
+                <x:constraints weightx="0.0" />
+                <x:event>click.buttonClick</x:event>
+            </XdevButton>
+            <XdevButton x:action="SaveAction" styleName="friendly" x:name="button">
+                <x:constraints weightx="0.0" />
+            </XdevButton>
+        </XdevHorizontalLayout>
+        <XdevPanel x:name="panel">
+            <x:constraints gridx="1" gridy="2" weighty="0.1" weightx="0.1" width="100%" height="100%" />
+        </XdevPanel>
+    </XdevGridLayout>
+    <XdevNavigator x:target="panel" x:name="navigator" x:singleComponentContainer="MainUI">
+        <x:views>
+            <entry path="" class="View1" />
+            <entry path="view2" class="View2" />
+            <entry path="view3" class="View3" />
+        </x:views>
+    </XdevNavigator>
+</XdevUI>
+
