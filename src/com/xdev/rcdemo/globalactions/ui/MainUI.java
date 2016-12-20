@@ -20,7 +20,7 @@ import com.xdev.ui.navigation.Navigation;
 import com.xdev.ui.navigation.XdevNavigator;
 
 @Push(value = PushMode.MANUAL, transport = Transport.LONG_POLLING)
-@Theme("RapidClipse_Demo_GlobalActions")
+@Theme("rapidclipse_demo_globalactions")
 public class MainUI extends XdevUI {
 	public MainUI() {
 		super();
